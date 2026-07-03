@@ -1,0 +1,14 @@
+{
+  "name": "ds-agent-team",
+  "version": "1.0.0",
+  "description": "Multi-agent collaboration system on Feishu - prefix routing, agent orchestration, real-time dashboard",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "ws": "^8.21.0"
+  },
+  "keywords": ["multi-agent", "llm", "feishu", "deepseek", "agent-orchestration"],
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+.env
+node_modules/
+*.log
+*.pid
+*.jsonl
+data/
+logs/
