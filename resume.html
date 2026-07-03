@@ -3,107 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>谢程宇 — 简历</title>
+<title>谢程宇 — 个人简历</title>
 <style>
   @page { size: A4; margin: 0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: #000; color: #f5f5f7;
-    font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 13px; line-height: 1.7;
-    display: flex; justify-content: center; padding: 40px 20px;
+    font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+    font-size: 14px; line-height: 1.6; color: #222;
+    display: flex; justify-content: center; padding: 20px;
   }
-  .page {
-    width: 210mm; min-height: 297mm;
-    background: #0a0a0a;
-    border: 1px solid #1c1c1c;
-    padding: 48px 52px;
-  }
-  h1 { font-size: 28px; font-weight: 500; letter-spacing: 2px; }
-  .sub { font-size: 13px; color: #888; margin: 6px 0 32px; }
-  .sub a { color: #888; text-decoration: none; }
-  .section { margin-bottom: 24px; }
-  .section h2 {
-    font-size: 11px; font-weight: 500; color: #666;
-    text-transform: uppercase; letter-spacing: 3px;
-    border-bottom: 1px solid #1c1c1c;
-    padding-bottom: 8px; margin-bottom: 14px;
-  }
-  .section p { color: #bbb; margin-bottom: 8px; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
-  .grid .l { color: #888; font-size: 12px; }
-  .grid .v { color: #bbb; }
-  .project { margin-bottom: 16px; }
-  .project .name { font-weight: 500; color: #f5f5f7; font-size: 14px; }
-  .project .role { color: #666; font-size: 11px; margin-left: 8px; }
-  .project .desc { color: #999; margin-top: 4px; font-size: 12px; }
-  .tag {
-    display: inline-block; padding: 2px 8px; margin: 2px 4px 2px 0;
-    border: 1px solid #2a2a2a; border-radius: 3px;
-    font-size: 10px; color: #777;
-  }
+  .page { width: 210mm; padding: 32px 40px; }
+  .header { margin-bottom: 20px; }
+  .header h1 { font-size: 24px; font-weight: 600; letter-spacing: 1px; }
+  .header .info { font-size: 13px; color: #555; margin-top: 4px; }
+  .header .info span { margin-right: 16px; }
+
+  h2 { font-size: 15px; font-weight: 600; border-bottom: 1.5px solid #333; padding-bottom: 3px; margin: 20px 0 10px; }
+
+  .project { margin-bottom: 14px; }
+  .project .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .project .name { font-weight: 600; }
+  .project .date { font-size: 12px; color: #888; }
+  .project .role { font-size: 13px; color: #555; margin-bottom: 2px; }
+  .project ul { margin: 4px 0 0 18px; font-size: 13px; color: #444; }
+  .project li { margin-bottom: 2px; }
+
+  .skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 32px; font-size: 13px; }
+  .skill-grid .k { color: #555; }
+  .skill-grid .v { color: #222; }
+
+  .summary { font-size: 13px; color: #444; }
+
   @media print {
-    body { background: #000; padding: 0; }
-    .page { border: none; }
+    body { padding: 0; margin: 0; }
+    .page { box-shadow: none; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-<h1>谢程宇</h1>
-<div class="sub">
-  笔名 行思君 · GitHub: <a href="https://github.com/x2690494735-svg">x2690494735-svg</a> · 公众号: 行思君
-</div>
-
-<div class="section">
-  <h2>技能</h2>
-  <div class="grid">
-    <span class="l">核心能力</span><span class="v">AI 辅助全流程开发（Vibe Coding / Agentic Workflow Design）</span>
-    <span class="l">语言 &amp; 运行时</span><span class="v">Node.js · Python · HTML/CSS</span>
-    <span class="l">AI &amp; 工具链</span><span class="v">Claude Code · DeepSeek API · Prompt Engineering · ffmpeg</span>
-    <span class="l">前端 &amp; 设计</span><span class="v">CSS 动效 · Three.js（学习中）· 设计审美</span>
-    <span class="l">运维 &amp; 自动化</span><span class="v">Playwright · CDP 浏览器自动化 · Git</span>
+<div class="header">
+  <h1>谢程宇</h1>
+  <div class="info">
+    <span>笔名：行思君</span>
+    <span>GitHub：x2690494735-svg</span>
+    <span>公众号：行思君</span>
   </div>
 </div>
 
-<div class="section">
-  <h2>项目经历</h2>
+<h2>个人概述</h2>
+<p class="summary">内容创作者，一年前开始借助 AI 工具进行软件开发。独立完成多个从想法到落地的项目，涵盖多 Agent 系统、浏览器自动化、AI 内容管线、交互页面。核心能力是借助 AI 从零搭建可运行的产品，擅长快速原型和全流程交付。</p>
 
-  <div class="project">
-    <span class="name">DS Agent Team</span><span class="role">独立开发者</span>
-    <div class="desc">多 Agent 协作系统，运行在飞书群中。十几个专职 Agent（研究员/审校/总结/美术总监/配音等）通过前缀路由分发任务，Agent 之间可互相调用。Node.js + DeepSeek API，含实时活动看板。已稳定运行半年。</div>
-    <span class="tag">Node.js</span><span class="tag">Multi-Agent</span><span class="tag">DeepSeek API</span><span class="tag">飞书</span>
-  </div>
-
-  <div class="project">
-    <span class="name">闲鱼开店自动化</span><span class="role">独立开发者</span>
-    <div class="desc">从竞品分析到封面生成到浏览器自动上架的完整管线。AI 生成商品封面和文案，CDP 协议接管浏览器完成表单填写和发布。含每日擦亮提醒和排期系统。</div>
-    <span class="tag">CDP 自动化</span><span class="tag">AI 生图</span><span class="tag">竞品分析</span>
-  </div>
-
-  <div class="project">
-    <span class="name">AI 短剧管线</span><span class="role">独立开发者</span>
-    <div class="desc">剧本→分镜→生图→配音→合成的全流程管线。支持竖屏 Scene+Cue 双轨结构，集成 AI 生图和 TTS 配音，一键出片。</div>
-    <span class="tag">Pipeline</span><span class="tag">AI 生图</span><span class="tag">TTS</span>
-  </div>
-
-  <div class="project">
-    <span class="name">设计蒸馏管线</span><span class="role">独立开发者</span>
-    <div class="desc">自动拆解网页设计技法的日常工具。输入 URL → 提取配色/动效/排版模式 → 输出可复用 CSS/JS 代码片段 → 存入技法库。日均处理 1-2 个站点。</div>
-    <span class="tag">CSS</span><span class="tag">设计系统</span><span class="tag">自动化</span>
-  </div>
+<h2>技能</h2>
+<div class="skill-grid">
+  <span class="k">编程语言</span><span class="v">Node.js · Python · HTML/CSS</span>
+  <span class="k">AI 工具</span><span class="v">Claude Code（深度使用）· DeepSeek API · Prompt Engineering</span>
+  <span class="k">前端</span><span class="v">CSS 动画/交互 · Three.js（基础）</span>
+  <span class="k">自动化</span><span class="v">Playwright · Chrome DevTools Protocol · ffmpeg</span>
+  <span class="k">工具链</span><span class="v">Git · Node.js 生态 · 命令行</span>
+  <span class="k">语言</span><span class="v">中文（母语）· 英文（技术文档阅读）</span>
 </div>
 
-<div class="section">
-  <h2>背景</h2>
-  <p>内容创作者，非职业程序员。过去一年借助 AI 工具从零搭建了多个从想法到投产的完整项目。不上班，每天都在做东西。当前研究方向：LLM Agent 记忆系统、多 Agent 架构、Vibe Coding 工作流。</p>
+<h2>项目经历</h2>
+
+<div class="project">
+  <div class="head"><span class="name">DS Agent Team — 飞书多 Agent 协作系统</span><span class="date">2026.06 — 至今</span></div>
+  <div class="role">独立开发</div>
+  <ul>
+    <li>设计并实现基于前缀路由的多 Agent 调度框架，12 个专职 Agent 在同一群聊中协作</li>
+    <li>Agent 间支持互调，PM Agent 拆解任务后分派给多个子 Agent 收集结果并汇总</li>
+    <li>搭建实时活动看板，可视化所有 Agent 的消息收发状态</li>
+    <li>技术栈：Node.js + DeepSeek API + 飞书开放平台，日均处理数十条消息</li>
+  </ul>
 </div>
 
-<div class="section">
-  <h2>语言</h2>
-  <p>中文（母语）· 英文（可阅读技术文档）</p>
+<div class="project">
+  <div class="head"><span class="name">闲鱼开店自动化</span><span class="date">2026.05 — 2026.07</span></div>
+  <div class="role">独立开发</div>
+  <ul>
+    <li>搭建竞品数据采集→AI 封面生成→浏览器自动上架的完整管线</li>
+    <li>通过 CDP 协议接管 Chrome 完成闲鱼发布页的表单填写、图片上传和发布操作</li>
+    <li>开发每日擦亮提醒和商品排期调度系统</li>
+    <li>技术栈：Node.js + Chrome DevTools Protocol + AI 生图 API</li>
+  </ul>
 </div>
+
+<div class="project">
+  <div class="head"><span class="name">AI 短剧管线</span><span class="date">2026.05 — 2026.06</span></div>
+  <div class="role">独立开发</div>
+  <ul>
+    <li>搭建剧本→分镜→生图→配音→合成的端到端视频制作管线</li>
+    <li>设计 Scene + Cue 双轨数据结构，支持竖屏短剧的灵活编排</li>
+    <li>技术栈：Node.js + AI 生图 API + TTS 服务 + ffmpeg</li>
+  </ul>
+</div>
+
+<div class="project">
+  <div class="head"><span class="name">设计蒸馏管线</span><span class="date">2026.06 — 至今</span></div>
+  <div class="role">独立开发</div>
+  <ul>
+    <li>开发网页设计技法自动拆解工具，输入 URL 提取配色/动效/排版模式</li>
+    <li>输出可复用的 CSS/JavaScript 代码片段并存入技法库</li>
+    <li>日均处理 1-2 个设计站点，持续积累可复用设计模式</li>
+  </ul>
+</div>
+
+<h2>当前研究方向</h2>
+<p class="summary">LLM Agent 记忆系统、多 Agent 架构设计、Vibe Coding（自然语言驱动开发）、Agentic Workflow Design</p>
 
 </div>
 </body>
